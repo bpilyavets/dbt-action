@@ -64,7 +64,7 @@ RUN python -m pip install --no-cache-dir "git+https://github.com/dbt-labs/${dbt_
 # dbt-clickhouse
 ##
 FROM base as dbt-clickhouse
-RUN python -m pip install --no-cache-dir dbt-clickhouse
+RUN python -m pip install --no-cache-dir "git+https://github.com/ClickHouse/dbt-clickhouse#egg=dbt-clickhouse"
 
 ##
 # dbt-postgres
