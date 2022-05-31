@@ -47,6 +47,7 @@ ENV LANG=C.UTF-8
 
 # Update python
 RUN python -m pip install --upgrade pip setuptools wheel --no-cache-dir
+RUN python -m pip install --no-cache-dir dbt-clickhouse
 
 # Set docker basics
 WORKDIR /usr/app/dbt/
