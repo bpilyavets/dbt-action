@@ -61,6 +61,12 @@ FROM base as dbt-core
 RUN python -m pip install --no-cache-dir "git+https://github.com/dbt-labs/${dbt_core_ref}#egg=dbt-core&subdirectory=core"
 
 ##
+# dbt-clickhouse
+##
+FROM base as dbt-clickhouse
+RUN python -m pip install --no-cache-dir dbt-clickhouse
+
+##
 # dbt-postgres
 ##
 FROM base as dbt-postgres
